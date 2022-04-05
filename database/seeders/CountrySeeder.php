@@ -244,7 +244,7 @@ class CountrySeeder extends Seeder
                 array('id' => '228','name_ar' => 'زائير (سابقة)','name_fr' => 'Zaïre (ancien)','name_en' => 'Zaire (former)','code' => 'zr' ,'phone_code'=>'+243' ,'status'=>'ok'),
                 array('id' => '229','name_ar' => 'زيمبابوي','name_fr' => 'Zimbabwe','name_en' => 'Zimbabwe','code' => 'zw' ,'phone_code'=>'+263' ,'status'=>'ok'),
                 array('id' => '230','name_ar' => 'الولايات المتحدة','name_fr' => 'les États-Unis d\'Amérique','name_en' => 'United States of America','code' => 'us' ,'phone_code'=>'+1' ,'status'=>'ok'),
-                array('id' => '231','name_ar' => 'غير معروف','name_fr' => 'unknown','name_en' => 'unknown','code' => 'null','phone_code'=>'' )
+                array('id' => '231','name_ar' => 'غير معروف','name_fr' => 'unknown','name_en' => 'unknown','code' => 'null','phone_code'=>'','status'=>'ok' )
                 ];
 
 
