@@ -3,9 +3,10 @@
         <div class="container-fluid">
             <div class="row">
                     <div class="text-sm-right d-none d-sm-block">
-                        <script>
-                        document.write(new Date().getFullYear())
-                    </script>
+                        {{-- <script>
+                        // document.write(new Date().getFullYear())
+                        </script> --}}
+                        {{date('Y')}}
                     © Mostafa samir.
                 </div>
                 <div class="col-sm-6">

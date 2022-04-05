@@ -103,9 +103,7 @@
   <script src="{{asset('asset/js/dashboard.init.js')}}"></script>
   <script defer src="{{asset('asset/js/owl.carousel.min.js')}}"></script>
   <script defer src="{{asset('seleccted/select2.min.js')}}"></script>
-  {{--owl.carousel  بي defer المشكلة اتحلت بتاعت مكتبة  --}}
   @include('layouts.dashboard.toastr')
-  {{-- <script src="{{asset('asset/js/bootstrap.min.js')}}"></script> --}}
   @if(app()->getLocale() == 'ar')
   <script src="{{asset('asset/js/main_ar.js')}}"></script>
   @else

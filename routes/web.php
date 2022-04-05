@@ -1,6 +1,8 @@
 <?php
 
+use Illuminate\Support\Facades\Auth;
 use Illuminate\Support\Facades\Route;
+use App\Http\Controllers\CountrieController;
 
 /*
 |--------------------------------------------------------------------------
@@ -18,5 +20,8 @@ Route::get('/', function () {
 });
 
 Auth::routes();
+Route::prefix('dashboard')->name('dashboard.')->middleware(['auth'])->group(function () {
+    Route::resource('countries',CountrieController::class);
+});
 
 Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name('home');

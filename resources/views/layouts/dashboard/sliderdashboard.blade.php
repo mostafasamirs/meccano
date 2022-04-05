@@ -34,30 +34,11 @@
       <ul class="metismenu list-unstyled" id="side-menu">
         <li class="menu-title" style="font-size: 18px">@lang('site.menu')</li>
         <li>
-          <a href="{{url('dashboard/welcome')}}">
+          <a href="{{route('dashboard.countries.index')}}">
             <i class="uil-home-alt"></i><span class="badge badge-pill badge-primary float-right">01</span>
             <span class="dashboard_site">@lang('site.dashboard')</span>
           </a>
-        
         </li>
-        {{-- start menu categories --}}
-        <li class="menu-title" id="menu-titles">@lang('site.categories_dashboard')</li>
-        {{-- start  users --}}
-        <li>
-          <a href="javascript: void(0);" class="has-arrow waves-effect">
-            <i class="uil-user"></i>
-            <span id="menu-titled">@lang('site.users')</span>
-          </a>
-          <ul class="sub-menu" aria-expanded="false">
-            <li><a href="#" alt="" title="@lang('site.users')">@lang('site.users')</a>
-            </li>
-          </ul>
-        </li>
-        {{-- end  users --}}
-
-        {{-- start  categories --}}
-
-  
       </ul>
       </li>
       </ul>

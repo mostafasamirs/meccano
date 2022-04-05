@@ -85,11 +85,11 @@
           data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
           <i class="uil-bell"></i>
           <span class="badge badge-danger badge-pill"></span>
-         
+
         </button>
         <div class="dropdown-menu dropdown-menu-lg dropdown-menu-right p-0"
           aria-labelledby="page-header-notifications-dropdown">
-   
+
           <div div data-simplebar style="max-height: 230px;">
 
             {{-- <a href="#" class="text-reset notification-item">
@@ -165,7 +165,7 @@
         <img class="rounded-circle header-profile-user" src="{{asset('asset/images/users/avatar-4.jpg')}}"
           alt="Header Avatar">
         <span class="d-none d-xl-inline-block ml-1 font-weight-medium font-size-15">
-          {{auth()->user()->first_name}}
+          {{auth()->user()->name}}
           {{-- {{auth()->user()->last_name}} --}}
         </span>
         <i class="uil-angle-down d-none d-xl-inline-block font-size-15"></i>

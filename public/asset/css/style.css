@@ -58,7 +58,7 @@ body {
 
 }
 
-body::-webkit-scrollbar{
+/* body::-webkit-scrollbar{
   width: 16px;
 }
 body::-webkit-scrollbar-track{
@@ -68,7 +68,7 @@ body::-webkit-scrollbar-thumb{
   background-color: #5b73e8;
   border-radius: 30px;
   border: 1px solid #ddd;
-}
+} */
 
 /* form-group */
 .form-group input[type=text]:focus {
@@ -550,4 +550,14 @@ span.field-icon {
 
   display: inline-block;
   margin: 0 15px 0 0px !important;
+}
+
+.styleadd{
+    margin-bottom: 15px;
+    margin-top: 15px;
+    float: right;
+    margin-right: 20px;
+}
+.styletitle{
+    margin: 20px 0px 0px 10px!important;
 }

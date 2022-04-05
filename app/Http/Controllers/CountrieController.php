@@ -14,7 +14,8 @@ class CountrieController extends Controller
      */
     public function index()
     {
-        //
+        $countries =Countrie::whereNotnull('id')->paginate();
+        return view('dashboard.countries.index',compact('countries'));
     }
 
     /**
