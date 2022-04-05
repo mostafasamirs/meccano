@@ -1,0 +1,9 @@
+.style_icon i {
+
+  float: left;
+  transform: translate(9px, -25px)
+}
+
+.Loading {
+  margin: 10px -33px 0px 0px !important;
+}
