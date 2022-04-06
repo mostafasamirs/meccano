@@ -137,6 +137,14 @@ class Countries extends Component
         $country->save();
         session()->flash('message', 'Country has been updated successfully');
         //For hide modal after add student success
+        $this->name_ar = '';
+        $this->name_en = '';
+        $this->name_fr = '';
+        $this->code = '';
+        $this->phone_code = '';
+        $this->status =  ''; //default data
+        //For hide modal after add student success
+
         $this->dispatchBrowserEvent('close-modal');
 
     }
