@@ -55,7 +55,7 @@
                         <div class="form-group row">
                             <label for="status" class="col-3">status</label>
                             <div class="col-9">
-                                <select class="form-control selected" wire:model.lazy="status" name="status">
+                                <select class="form-control selected" wire:model.lazy="status" name="status" required>
                                     <option disabled>choose</option>
                                     <option value="ok">Ok</option>
                                     <option value="no_ok"> No OK </option>

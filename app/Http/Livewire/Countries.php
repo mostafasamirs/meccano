@@ -39,11 +39,11 @@ class Countries extends Component
     {
         //on form submit validation
         $this->validate([
-            'name_ar' => 'required',
-            'name_en' => 'required',
-            'name_fr' => 'sometimes',
-            'code' => 'sometimes',
-            'phone_code' => 'required',
+            'name_ar' => 'required|max:200',
+            'name_en' => 'required|max:200',
+            'name_fr' => 'sometimes|max:200',
+            'code' => 'sometimes|max:200',
+            'phone_code' => 'required|max:200',
             'status' => 'required',
         ]);
         //Add Student Data
@@ -117,11 +117,11 @@ class Countries extends Component
     {
         //on form submit validation
         $this->validate([
-            'name_ar' => 'required',
-            'name_en' => 'required',
-            'name_fr' => 'sometimes',
-            'code' => 'sometimes',
-            'phone_code' => 'required',
+            'name_ar' => 'required|max:200',
+            'name_en' => 'required|max:200',
+            'name_fr' => 'sometimes|max:200',
+            'code' => 'sometimes|max:200',
+            'phone_code' => 'required|max:200',
             'status' => 'sometimes',
         ]);
 
