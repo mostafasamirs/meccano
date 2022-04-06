@@ -37,7 +37,7 @@ class Countries extends Component
     //on form submit validation
     public function store()
     {
-        //on form submit validation
+        //on  form submit validation
         $this->validate([
             'name_ar' => 'required|max:200',
             'name_en' => 'required|max:200',
