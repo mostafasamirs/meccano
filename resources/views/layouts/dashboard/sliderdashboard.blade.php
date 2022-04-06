@@ -5,16 +5,16 @@
   <div class="navbar-brand-box">
     <a href="#" class="logo logo-dark">
       <span class="logo-sm">
-        <img src="{{asset('asset/images/logo-sm.png')}}" style="margin-top: 26px;" alt="" height="22">
+        <img src="{{asset('asset/images/logo-sm.png')}}" alt="" height="22" class="logoinsmal">
       </span>
       <span class="logo-lg">
-        <img src="{{asset('asset/images/logo-dark.png')}}" style="margin-top: 26px;" alt="" height="20">
+        <img src="{{asset('asset/images/logo-dark.png')}}" alt="" height="20" class="logoin">
       </span>
     </a>
 
     <a href="#" class="logo logo-light">
       <span class="logo-sm">
-        <img src="{{asset('asset/images/logo-sm.png')}}" style="margin-top: 26px;" alt="" height="22">
+        <img src="{{asset('asset/images/logo-sm.png')}}" alt="" height="22" class="logoinsmal">
       </span>
       <span class="logo-lg">
         <img src="{{asset('asset/images/logo-light.png')}}" style="margin-top: 26px;" alt="" height="20">

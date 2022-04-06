@@ -17,12 +17,12 @@ class CreateCountriesTable extends Migration
             $table->id();
             $table->string('name_ar');
             $table->string('name_en');
-            $table->string('name_fr');
-            $table->string('code')->unique();
+            $table->string('name_fr')->nullable();
+            $table->string('code')->nullable();
             $table->string('phone_code');
-            $table->enum('status',['no_ok','ok'])->default('ok');
-
+            $table->enum('status',['no_ok','ok'],'200')->default('ok');
             $table->timestamps();
+            $table->softDeletes();
         });
     }
 

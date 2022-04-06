@@ -20,8 +20,9 @@
   <link rel="stylesheet" href="{{asset('asset/bootstraptoggle/bootstrap-toggle.min.css')}}" />
   <link rel="stylesheet" href="{{asset('asset/css/owl.carousel.min.css')}}" />
   <link rel="stylesheet" href="{{asset('asset/css/owl.theme.default.min.css')}}" />
-  <link rel="stylesheet" href="{{asset('seleccted/select2.min.css')}}" />
+  <link rel="stylesheet" href="{{asset('asset/seleccted/select2.min.css')}}" />
   <link rel="stylesheet" href="{{asset('asset/css/style.css')}}" />
+  @livewireStyles
 
   @if (app()->getLocale() == 'ar')
   <!-- App css  ar-->
@@ -48,7 +49,7 @@
 </head>
 
 <body>
-
+    @include('sweetalert::alert')
   <div class="row">
     <div class="col-12">
       <div class="loader_bg">
@@ -89,9 +90,19 @@
 
   {{-- <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script> --}}
   <script src="{{asset('asset/js/jquery-3.4.1.min.js')}}"></script>
+  {{-- sweetalert --}}
+  <script src="https://unpkg.com/sweetalert/dist/sweetalert.min.js"></script>
+  <link rel="stylesheet" href="{{asset('assets/cssadmin/sweetalert2.min.css')}}">
+  <script src="{{asset('assets/cssadmin/sweetalert2.all.min.js')}}"></script>
+
+  <script src="https://cdn.jsdelivr.net/npm/sweetalert2@9"></script>
+  <script src="https://unpkg.com/sweetalert/dist/sweetalert.min.js"></script>
+  {{--sweetalert  --}}
+
+
 
   {{-- <script src="{{asset('asset/libs/jquery/jquery.min.js')}}"></script> --}}
-  <script src="{{asset('asset/libs/bootstrap/js/bootstrap.bundle.min.js')}}"></script>
+  {{-- <script src="{{asset('asset/libs/bootstrap/js/bootstrap.bundle.min.js')}}"></script> --}}
   <script src="{{asset('asset/libs/metismenu/metisMenu.min.js')}}"></script>
   <script src="{{asset('asset/libs/simplebar/simplebar.min.js')}}"></script>
   <script src="{{asset('asset/libs/node-waves/waves.min.js')}}"></script>
@@ -102,7 +113,7 @@
   <script src="{{asset('asset/js/app.js')}}"></script>
   <script src="{{asset('asset/js/dashboard.init.js')}}"></script>
   <script defer src="{{asset('asset/js/owl.carousel.min.js')}}"></script>
-  <script defer src="{{asset('seleccted/select2.min.js')}}"></script>
+  <script defer src="{{asset('asset/seleccted/select2.min.js')}}"></script>
   @include('layouts.dashboard.toastr')
   @if(app()->getLocale() == 'ar')
   <script src="{{asset('asset/js/main_ar.js')}}"></script>
@@ -123,5 +134,13 @@ $('.loader_bg').fadeToggle();
   });
 
   </script>
+    {{-- liv --}}
+  <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.1/dist/js/bootstrap.min.js"></script>
+    @stack('scripts')
+    @livewireScripts
+  {{-- liv --}}
+
 
 </body>
