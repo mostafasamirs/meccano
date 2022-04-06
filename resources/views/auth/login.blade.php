@@ -12,7 +12,7 @@
                         @csrf
                         {{--  --}}
                         <div class="text-center mb-4">
-                            <h5>email:meccano@app.com</h5>
+                            <h5>email:mostafa@app.com</h5>
                             <h5>password:123456789</h5>
                         </div>
                         {{--  --}}
