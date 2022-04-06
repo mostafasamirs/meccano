@@ -54,18 +54,6 @@ class Countries extends Component
         $country->code = $this->code;
         $country->phone_code = $this->phone_code;
         $country->status = $this->status;
-
-        // dd(  $country->status = $this->status);
-
-        // if ($country->status == null) {
-        //     $country->status = 'ok';
-        // }elseif($country->status == 'no_ok'){
-        //     $country->status = 'no_ok';
-        // }else{
-        //     $country->status = $this->status;
-        // }
-
-
         $country->save();
         session()->flash('message', 'New Country has been added successfully');
 
