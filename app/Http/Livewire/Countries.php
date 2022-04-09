@@ -19,18 +19,32 @@ class Countries extends Component
 
     public $edit_id, $delete_id ,$view_id; //pass id
 
-    public $searchTerm; //search
+
+    // report
+    public $search; //search
+    public $byContinent = null; //select
+    public $PerPage = 10; //perpage
+    public $sortBy = 'asc'; //sortBy
+    public $orderBy = 'name_ar'; //orderBy
+    // report
+
+
+
+
 
     // render data livewire.countries
     public function render()
     {
-        //Get all students
-        $countries = Countrie::where('name_ar', 'like', '%'.$this->searchTerm.'%')
-        ->orWhere('name_en', 'like', '%'.$this->searchTerm.'%')
-        ->orWhere('status', 'like', '%'.$this->searchTerm.'%')
-        ->orWhere('code', 'like', '%'.$this->searchTerm.'%')
-        ->orWhere('phone_code', 'like', '%'.$this->searchTerm.'%')->latest()->paginate();
-        return view('livewire.countries', ['countries'=>$countries])->layout('dashboard.index');
+        return view('livewire.countries', [
+            'countries'=> Countrie::orderBy('name_ar','asc')->get(),
+            'countries'=> Countrie::when($this->byContinent,function($query){
+            $query->where('id',$this->byContinent)->get();
+        })
+        ->search(trim($this->search))
+        ->orderBy($this->orderBy,$this->sortBy)
+        ->paginate($this->PerPage)
+
+    ])->layout('dashboard.index');
     }
 
     // start add

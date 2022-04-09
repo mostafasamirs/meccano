@@ -19,10 +19,51 @@
 
 
                         <div class="row mb-1">
-                            <div class="col-md-12">
-                                <input type="search" class="form-control w-25" placeholder="search" wire:model="searchTerm" style="float: right;" />
+                            <div class="col-lg-3 md-12">
+                                <label for="search">Search</label>
+                                <input type="search" class="form-control w-100" placeholder="search" wire:model.debounce.350ms="search" />
                             </div>
+
+                            <div class="col-lg-3 md-12">
+                            <label for="selected">Selected</label>
+                            <select wire:model="byContinent" class="form-control selected" id="selected">
+                                <option value="">NO selected</option>
+                                @foreach ($countries as  $country)
+                                <option value="{{$country->id}}">{{ $country->code }} - {{ $country->name_ar }}</option>
+                                @endforeach
+                            </select>
                         </div>
+                            <div class="col-lg-2 md-12">
+                                <label for="Per Page">Per Page</label>
+                                <select wire:model="PerPage" class="form-control">
+                                    <option value="5">5</option>
+                                    <option value="10">10</option>
+                                    <option value="15">15</option>
+                                    <option value="25">25</option>
+                                </select>
+                            </div>
+
+                            <div class="col-lg-2 md-12">
+                                <label for="orderBy">OrderBy</label>
+                                <select wire:model="orderBy" class="form-control">
+                                    <option value="name_ar">Country Name Arabic</option>
+                                    <option value="name_en">Country Name English</option>
+                                </select>
+                            </div>
+
+                            <div class="col-lg-2 md-12">
+                                <label for="sortBy">SortBy</label>
+                                <select wire:model="sortBy" class="form-control">
+                                    <option value="asc">Asc</option>
+                                    <option value="desc">Desc</option>
+                                </select>
+                            </div>
+
+
+                        </div>
+
+
+
                         <article class="container">
                         <div class="row">
                         <div class="table-responsive">
@@ -31,8 +72,8 @@
 
                                 <tr>
                                     <th>ID</th>
-                                    <th>Name arabic</th>
-                                    <th>Name english</th>
+                                    <th>Name Arabic</th>
+                                    <th>Name English</th>
                                     <th>phone code</th>
                                     <th>phone</th>
                                     <th>
@@ -130,9 +171,27 @@
             $('#viewStudentModal').modal('show');
         });
     </script>
+
+
+    {{--select2--}}
     <script>
-          $(document).ready(function() {
-      $('.selected').select2();
-  });
+            $(document).ready(function() {
+            $('#selected').select2({
+                placeholder: 'Select an option',
+            });
+            $(document).on('change', '#selected', function (e) {
+                @this.set('byContinent', e.target.value);
+            });
+        });
+        document.addEventListener("livewire:load", function (event) {
+            window.livewire.hook('afterDomUpdate', () => {
+                $('#selected').select2({
+                    placeholder: 'Select an option',
+                });
+            });
+        });
     </script>
+    {{--select2--}}
+
+
 @endpush

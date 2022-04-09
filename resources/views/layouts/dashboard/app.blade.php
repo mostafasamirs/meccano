@@ -15,12 +15,12 @@
   <link rel="stylesheet" href="{{asset('asset/css/app.min.css')}}" />
   <link rel="stylesheet" href="{{asset('asset/css/bootstrap.min.css')}}" />
   <link rel="stylesheet" href="{{asset('asset/css/icons.min.css')}}" />
-  <link rel="stylesheet" href="{{asset('asset/css/line.css')}}" />
+  {{-- <link rel="stylesheet" href="{{asset('asset/css/line.css')}}" /> --}}
   <link rel="stylesheet" href="{{asset('asset/toastr/toastr.min.css')}}" />
   <link rel="stylesheet" href="{{asset('asset/bootstraptoggle/bootstrap-toggle.min.css')}}" />
   <link rel="stylesheet" href="{{asset('asset/css/owl.carousel.min.css')}}" />
   <link rel="stylesheet" href="{{asset('asset/css/owl.theme.default.min.css')}}" />
-  <link rel="stylesheet" href="{{asset('asset/seleccted/select2.min.css')}}" />
+  <link rel="stylesheet" href="{{asset('asset/select2/select2.min.css')}}" />
   <link rel="stylesheet" href="{{asset('asset/css/style.css')}}" />
   @livewireStyles
 
@@ -92,8 +92,8 @@
   <script src="{{asset('asset/js/jquery-3.4.1.min.js')}}"></script>
   {{-- sweetalert --}}
   <script src="https://unpkg.com/sweetalert/dist/sweetalert.min.js"></script>
-  <link rel="stylesheet" href="{{asset('assets/cssadmin/sweetalert2.min.css')}}">
-  <script src="{{asset('assets/cssadmin/sweetalert2.all.min.js')}}"></script>
+  {{-- <link rel="stylesheet" href="{{asset('assets/cssadmin/sweetalert2.min.css')}}"> --}}
+  {{-- <script src="{{asset('assets/cssadmin/sweetalert2.all.min.js')}}"></script> --}}
 
   <script src="https://cdn.jsdelivr.net/npm/sweetalert2@9"></script>
   <script src="https://unpkg.com/sweetalert/dist/sweetalert.min.js"></script>
@@ -113,7 +113,7 @@
   <script src="{{asset('asset/js/app.js')}}"></script>
   <script src="{{asset('asset/js/dashboard.init.js')}}"></script>
   <script defer src="{{asset('asset/js/owl.carousel.min.js')}}"></script>
-  <script defer src="{{asset('asset/seleccted/select2.min.js')}}"></script>
+  <script defer src="{{asset('asset/select2/select2.min.js')}}"></script>
   @include('layouts.dashboard.toastr')
   @if(app()->getLocale() == 'ar')
   <script src="{{asset('asset/js/main_ar.js')}}"></script>
@@ -129,9 +129,6 @@
 $('.loader_bg').fadeToggle();
 }, 1500);
 
-  $(document).ready(function() {
-      $('.selected').select2();
-  });
 
   </script>
     {{-- liv --}}
@@ -141,6 +138,5 @@ $('.loader_bg').fadeToggle();
     @stack('scripts')
     @livewireScripts
   {{-- liv --}}
-
 
 </body>
